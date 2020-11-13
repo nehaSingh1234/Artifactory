@@ -19,7 +19,7 @@ REPOSITORY TAG IMAGE ID CREATED SIZE assignment latest 18a65c736bd7 2 minutes ag
 
 Now execute below commands for running the image.
 
-$ docker run -p 80:8080 assignment --name=runningversion
+$ docker run -p 80:8080 --name runningassignment assignment
 
 
 
