@@ -6,8 +6,8 @@ Steps to run jar on docker container-
 
 Make sure docker is installed
 Open a terminal or command prompt
-Go to assignment folder /Assigment>
-Run below command-
+1. Go to folder where you cloned the jar file and dockerfile
+2. Run below command to build image-
 $docker build -t assignment .
 
 You should see output like below:
@@ -17,7 +17,7 @@ Sending build context to Docker daemon 16.79MB Step 1/4 : FROM openjdk:8-jdk-alp
 Once docker image is built, check the image with command- $ docker images
 REPOSITORY TAG IMAGE ID CREATED SIZE assignment latest 18a65c736bd7 2 minutes ago 121MB
 
-Now execute below commands for running the image.
+3. Now execute below commands for running the image.
 
 $ docker run -p 80:8080 --name runningassignment assignment
 
@@ -29,4 +29,4 @@ You should receive output like below- . ____ _ __ _ _ /\ / ' __ _ () __ __ _ \ \
 
 2020-11-12 23:00:56.277 INFO 1 --- [ main] A.Assignment.AssignmentApplication : Starting AssignmentApplication v0.0.1-SNAPSHOT on d6ad53d8f203 with PID 1 (/Assignment-0.0.1-SNAPSHOT.jar started by root in /) 2020-11-12 23:00:56.301 INFO 1 --- [ main] A.Assignment.AssignmentApplication : No active profile set, falling back to default profiles: default 2020-11-12 23:00:59.949 INFO 1 --- [ main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 2020-11-12 23:00:59.998 INFO 1 --- [ main] o.apache.catalina.core.StandardService : Starting service [Tomcat] 2020-11-12 23:01:00.000 INFO 1 --- [ main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.39] 2020-11-12 23:01:00.256 INFO 1 --- [ main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 2020-11-12 23:01:00.257 INFO 1 --- [ main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3622 ms 2020-11-12 23:01:00.935 INFO 1 --- [ main] o.s.s.concurrent.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor' 2020-11-12 23:01:01.459 INFO 1 --- [ main] o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 2020-11-12 23:01:01.527 INFO 1 --- [ main] A.Assignment.AssignmentApplication : Started AssignmentApplication in 6.611 seconds (JVM running for 7.988)
 
-Now access the URL "http://localhost/units/si?units=degree/minute"
+4. Now access the URL "http://localhost/units/si?units=degree/minute"
