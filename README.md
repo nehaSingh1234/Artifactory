@@ -18,7 +18,10 @@ Once docker image is built, check the image with command- $ docker images
 REPOSITORY TAG IMAGE ID CREATED SIZE assignment latest 18a65c736bd7 2 minutes ago 121MB
 
 Now execute below commands for running the image.
-$ docker run -p 80:8080 assignment --name runningversion
+
+$ docker run -p 80:8080 assignment --name=runningversion
+
+
 
 You should receive output like below- . ____ _ __ _ _ /\ / ' __ _ () __ __ _ \ \ \
 ( ( )__ | '_ | '| | ' / ` | \ \ \
